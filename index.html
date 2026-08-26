@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Home Equity. Activated. — Leap HEI</title>
+  <meta name="description" content="Leap converts dormant home equity into immediate capital, with zero monthly payments and no debt obligation. Access up to $300,000 with no interest and no monthly payments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/leap-eligibility.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#1e3528">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Leap">
+        <img src="images/logo-gold.png" alt="Leap" class="nav__brand-img">
+      </a>
+      <nav>
+        <ul class="nav__menu">
+          <li><a href="how-it-works.html" class="nav__link">How it works</a></li>
+          <li class="nav__item--has-dropdown">
+            <a href="solutions.html" class="nav__link">Solutions</a>
+            <ul class="nav__dropdown">
+              <li><a href="solutions-restore.html">Leap Restore</a></li>
+              <li><a href="solutions-revive.html">Leap Revive</a></li>
+              <li><a href="solutions-relax.html">Leap Relax</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--has-dropdown">
+            <a href="learn.html" class="nav__link">Insights &amp; Resources</a>
+            <ul class="nav__dropdown">
+              <li><a href="financial-planning.html">Financial Planning</a></li>
+              <li><a href="housing-tips.html">Housing Related Tips</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="external-resources.html">External Resources</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--has-dropdown">
+            <a href="about.html" class="nav__link">Company</a>
+            <ul class="nav__dropdown">
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="partners.html">Partners</a></li>
+              <li><a href="pr-media.html">PR &amp; Media</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a href="https://app-stage.leaphei.com/auth/login?callbackUrl=%2Fverify-account" class="nav__signin">Sign In</a>
+        <a href="https://app-stage.leaphei.com/" data-app-href class="nav__cta">Apply &rarr;</a>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="navToggle"><span></span></button>
+    </div>
+    <div class="nav__drawer">
+      <a href="how-it-works.html" class="nav__link">How it works</a>
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__drawer-sub">
+        <a href="solutions-restore.html">Leap Restore</a>
+        <a href="solutions-revive.html">Leap Revive</a>
+        <a href="solutions-relax.html">Leap Relax</a>
+      </div>
+      <a href="learn.html" class="nav__link">Insights &amp; Resources</a>
+      <div class="nav__drawer-sub">
+        <a href="financial-planning.html">Financial Planning</a>
+        <a href="housing-tips.html">Housing Related Tips</a>
+        <a href="faq.html">FAQs</a>
+        <a href="external-resources.html">External Resources</a>
+      </div>
+      <a href="about.html" class="nav__link">Company</a>
+      <div class="nav__drawer-sub">
+        <a href="leadership.html">Leadership</a>
+        <a href="partners.html">Partners</a>
+        <a href="pr-media.html">PR &amp; Media</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <a href="https://app-stage.leaphei.com/auth/login?callbackUrl=%2Fverify-account" class="nav__link nav__link--cta">Sign In</a>
+      <a href="https://app-stage.leaphei.com/" data-app-href class="nav__link nav__link--cta">Apply &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+<!--
+  HOMEPAGE — rebuilt per Shane Baldino's written feedback (2026-05-20
+  "Leap - website comments.docx") and the 2026-05-19 walkthrough:
+   - Rebranded "Home Equity Investment / HEI" -> "Home Equity Agreement / HEA".
+     ("investment" kept only where it means the principal dollar amount, and
+     in the legal disclaimer, per Shane's own wording.)
+   - Lighter / brighter look: real bright home photo in the hero with a much
+     lighter scrim; solutions section flipped from full dark-green to a light
+     surface. Dark green now used sparingly — only the closing CTA module.
+   - New hero, how-it-works, solutions, compare, and closing copy verbatim
+     from Shane's doc. Disclaimer added.
+   - Scroll-reveal ("page builds as you scroll") was already wired via
+     .reveal + IntersectionObserver — Shane liked this, so it's kept and
+     extended to the section headers.
+  PENDING (flagged to Will):
+   - "Sign In" needs the real application/login URL (placeholder for now).
+   - Social account URLs needed (placeholders in footer).
+   - People/family imagery from the current live site still to be sourced;
+     reno photos placed on the solutions page per Shane.
+-->
+  <section class="hero">
+    <div class="hero__bg"><img src="images/tarzana.jpeg" alt="" fetchpriority="high"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <h1 class="hero__headline">Your Home Equity.<br><em>Activated.</em></h1>
+      <p class="hero__subhead">A Home Equity Investment can provide you up to $300,000 with no debt.</p>
+      <p class="hero__body">Not a traditional loan. Not refinancing. It&rsquo;s a belief in yourself. Leap can unlock the wealth you&rsquo;ve already accumulated and help create financial mobility through a Home Equity Investment. And there are no monthly payments, no interest, and no burden. You simply repay the investment plus a share of the home's appreciated value at or before the end of the term.</p>
+
+      <div class="hero__ctas">
+        <a href="how-it-works.html" class="btn btn--ghost btn--lg">Learn how it works</a>
+        <a href="apply.html" data-app-href class="btn btn--primary btn--lg">Check my eligibility &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-strip__inner">
+        <div class="trust-strip__item">
+          <span class="trust-strip__label">Cash unlocked</span>
+          <span class="trust-strip__value">Up to $300,000</span>
+          <span class="trust-strip__note">Based on your home's appraised value and verified equity.</span>
+        </div>
+        <div class="trust-strip__item">
+          <span class="trust-strip__label">Monthly cost</span>
+          <span class="trust-strip__value">$0 per month</span>
+          <span class="trust-strip__note">No monthly payments. Your budget stays unchanged.</span>
+        </div>
+        <div class="trust-strip__item">
+          <span class="trust-strip__label">Interest rate</span>
+          <span class="trust-strip__value">None</span>
+          <span class="trust-strip__note">No interest accrues. You share a portion of future appreciation with the Investor.</span>
+        </div>
+        <div class="trust-strip__item">
+          <span class="trust-strip__label">Decision speed</span>
+          <span class="trust-strip__value">Days, not weeks</span>
+          <span class="trust-strip__note">A fully automated pre-qualification in under two minutes.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section explainer">
+    <div class="container">
+      <header class="explainer__head reveal">
+        <h2 class="h1">How a Home Equity Investment from Leap&nbsp;works.</h2>
+      </header>
+
+      <div class="explainer__steps explainer__steps--minimal">
+        <article class="step reveal reveal--delay-1">
+          <span class="step__label">Step One</span>
+          <h3 class="step__title">Apply</h3>
+          <p class="step__body">Answer a few quick questions to see what you qualify for. No hard credit pull, and a decision in days, not weeks.</p>
+        </article>
+        <article class="step reveal reveal--delay-2">
+          <span class="step__label">Step Two</span>
+          <h3 class="step__title">Receive cash</h3>
+          <p class="step__body">Take a lump sum of up to $300,000, deposited directly to your account after closing.</p>
+        </article>
+        <article class="step reveal reveal--delay-3">
+          <span class="step__label">Step Three</span>
+          <h3 class="step__title">Repay when you're ready</h3>
+          <p class="step__body">When you sell your home, refinance, or reach the end of the term, you repay the original amount plus a share of your home's appreciated value.</p>
+        </article>
+      </div>
+
+      <div class="explainer__footer reveal">
+        <p class="explainer__note">Because this is not a traditional loan, you make no monthly payments and you do not accrue interest. It also means we can help customers who&rsquo;ve been rejected by traditional lenders. It&rsquo;s the product that meets your needs when other products can&rsquo;t. And when you sell your home, refinance, or reach the end of the term, you simply repay the original investment plus a corresponding share of your home&rsquo;s appreciated value. Our complete Terms and Disclosures are <a href="PDFs/Key%20Terms%20and%20Disclosures.pdf" style="text-decoration: underline;"  target="_blank" rel="noopener noreferrer">available here</a>.</p>
+        <a href="how-it-works.html" class="link-arrow">Read the full mechanics &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section solutions solutions--light">
+    <div class="container">
+      <header class="solutions__head reveal">
+        <h2 class="h1">Three solutions &mdash; built to&nbsp;help you achieve your&nbsp;dreams.</h2>
+        <p class="lead">Unlike a traditional HELOC, which takes a one-size-fits-all approach, Leap has built three distinct products, each suited to the unique needs of our customers.</p>
+      </header>
+
+      <div class="solutions__grid">
+        <article class="solution reveal reveal--delay-1" data-tone="restore">
+          <span class="solution__name">Leap Restore</span>
+          <p class="solution__who">For homeowners who want to <em>increase their credit score</em> and reduce high-interest debt.</p>
+          <ul class="solution__terms">
+            <li>Funding range <strong>$30k&ndash;$200k</strong></li>
+            <li>Term length <strong>Up to 10 years</strong></li>
+            <li>Designed for <strong>Debt consolidation</strong></li>
+            <li>Credit floor <strong>Flexible</strong></li>
+          </ul>
+          <div class="solution__ctas">
+            <a href="solutions-restore.html" class="link-arrow link-arrow--on-dark">Learn more &rarr;</a>
+            <a href="apply.html?product=restore" class="link-arrow link-arrow--red">Apply &rarr;</a>
+          </div>
+        </article>
+
+        <article class="solution reveal reveal--delay-2" data-tone="revive">
+          <span class="solution__name">Leap Revive</span>
+          <p class="solution__who">For small business owners who need <em>working capital</em> to fund their enterprise.</p>
+          <ul class="solution__terms">
+            <li>Funding range <strong>$50k&ndash;$300k</strong></li>
+            <li>Term length <strong>Up to 10 years</strong></li>
+            <li>Designed for <strong>Business funding</strong></li>
+            <li>Funds available <strong>At close, in full</strong></li>
+          </ul>
+          <div class="solution__ctas">
+            <a href="solutions-revive.html" class="link-arrow link-arrow--on-dark">Learn more &rarr;</a>
+            <a href="apply.html?product=revive" class="link-arrow link-arrow--red">Apply &rarr;</a>
+          </div>
+        </article>
+
+        <article class="solution reveal reveal--delay-3" data-tone="relax">
+          <span class="solution__name">Leap Relax</span>
+          <p class="solution__who">For homeowners approaching retirement who want to <em>turn equity into cash flow</em>.</p>
+          <ul class="solution__terms">
+            <li>Funding range <strong>$50k&ndash;$300k</strong></li>
+            <li>Term length <strong>Up to 30 years</strong></li>
+            <li>Designed for <strong>Retirement runway</strong></li>
+            <li>Age preference <strong>55+</strong></li>
+          </ul>
+          <div class="solution__ctas">
+            <a href="solutions-relax.html" class="link-arrow link-arrow--on-dark">Learn more &rarr;</a>
+            <a href="apply.html?product=relax" class="link-arrow link-arrow--red">Apply &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="compare__head reveal">
+        <h2 class="h1">How does a Leap&nbsp;HEI&nbsp;compare?</h2>
+        <p class="lead">Home Equity Investments work very differently than traditional loans, and are underwritten using different criteria. This allows Leap to work with customers whose credit profile might fall outside a traditional bank's requirements.</p>
+      </header>
+
+      <div class="compare__wrap reveal">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-leap">Leap HEI</th>
+              <th scope="col">HELOC</th>
+              <th scope="col">Cash-out refi</th>
+              <th scope="col">Personal loan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monthly payments</td><td class="is-leap">None</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Interest rate</td><td class="is-leap">None</td><td>Variable</td><td>Fixed</td><td>Fixed or variable</td></tr>
+            <tr><td>Adds debt to balance sheet</td><td class="is-leap">No. Structured as an equity investment, not a loan, under Leap's agreement.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Credit score impact</td><td class="is-leap">Minimal</td><td>Hard pull</td><td>Hard pull</td><td>Hard pull</td></tr>
+            <tr><td>Repayment trigger</td><td class="is-leap">Sale or end of term</td><td>Monthly</td><td>Monthly</td><td>Monthly</td></tr>
+            <tr><td>Maximum amount</td><td class="is-leap">Up to $300,000</td><td>Varies by lender</td><td>Varies by lender</td><td>Typically &lt; $100k</td></tr>
+            <tr><td>Decision speed</td><td class="is-leap">Fast, automated</td><td>2&ndash;6 weeks</td><td>4&ndash;8 weeks</td><td>Days to weeks</td></tr>
+            <tr><td>Income / employment requirement</td><td class="is-leap">Flexible</td><td>Required</td><td>Required</td><td>Required</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="compare__footer">
+        <a href="how-it-works.html" class="link-arrow">See the full comparison &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="close">
+    <div class="container close__inner">
+      <span class="close__eyebrow">Ready when you are</span>
+      <h2 class="close__headline">The wealth you've built deserves to work for&nbsp;you.</h2>
+      <p class="close__lead">Have you been declined by other lenders? Are you unsure of the best product? Do you need cash for retirement? A business? To repair your credit? Whatever your situation &mdash; if you&rsquo;ve built equity in your home, then Leap has a path forward for you.<br><br>No monthly payments. No debt. No appraisals. And no waiting.</p>
+      <div class="close__ctas">
+        <a href="apply.html" data-app-href class="btn btn--primary btn--lg">Check My Eligibility &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="container">
+      <p class="disclaimer__text">Leap Analytics, Inc. Home Equity Investments are not traditional loans. Available in select states. Investment terms vary by agreement.</p>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__brand" aria-label="Leap home">
+            <img src="images/logo-gold.png" alt="Leap" class="footer__brand-img">
+          </a>
+          <p class="footer__tag">A home equity agreement platform built for homeowners who want to put their equity to work without taking on a new monthly bill.</p>
+          <!-- Social URLs per Shane's 2026-06-26 "Website notes". -->
+          <div class="footer__social" aria-label="Follow Leap">
+            <a href="https://www.linkedin.com/company/leap-hei/" target="_blank" rel="noopener" aria-label="Leap on LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/leap_hea_/" target="_blank" rel="noopener" aria-label="Leap on Instagram">Instagram</a>
+            <a href="https://www.facebook.com/leaphealosangeles/" target="_blank" rel="noopener" aria-label="Leap on Facebook">Facebook</a>
+            <a href="https://x.com/leap_hea_" target="_blank" rel="noopener" aria-label="Leap on X">X</a>
+          </div>
+          <div class="footer__contact">
+            <a href="mailto:hello@leaphei.com">hello@leaphei.com</a>
+            <a href="tel:+18005327462">(800) 532-7462</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4><a href="solutions.html">Solutions</a></h4>
+          <ul>
+            <li><a href="solutions-restore.html">Leap Restore</a></li>
+            <li><a href="solutions-revive.html">Leap Revive</a></li>
+            <li><a href="solutions-relax.html">Leap Relax</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4><a href="learn.html">Insights &amp; Resources</a></h4>
+          <ul>
+            <li><a href="financial-planning.html">Financial Planning</a></li>
+            <li><a href="housing-tips.html">Housing Related Tips</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="external-resources.html">External Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4><a href="about.html">Company</a></h4>
+          <ul>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="pr-media.html">PR &amp; Media</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> Leap Analytics, Inc.&nbsp; All rights reserved. NMLS ID: 360009</span>
+        <div class="footer__legal">
+          <!-- Privacy + Terms link to Leap's hosted PDF per Shane's 2026-06-26 notes.
+               NOTE(Will): Shane supplied the SAME PDF URL for both Privacy and Terms
+               (…_Leap-Terms.pdf). Confirm whether a separate Privacy PDF exists. -->
+          <a href="https://cdn.prod.website-files.com/6847277523d31f80602ba064/6847277523d31f80602ba081_Leap-Terms.pdf" target="_blank" rel="noopener">Privacy</a>
+          <a href="https://cdn.prod.website-files.com/6847277523d31f80602ba064/6847277523d31f80602ba081_Leap-Terms.pdf" target="_blank" rel="noopener">Terms</a>
+          <a href="legal-disclosures.html">Disclosures</a>
+          <a href="legal-licenses.html">Licenses &amp; NMLS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+  <!-- Leap eligibility modal — opens on any "Check my eligibility" trigger; calls the Fly API -->
+  <script src="js/leap-eligibility.js" defer></script>
+</body>
+</html>

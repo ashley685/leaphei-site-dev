@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How a Home Equity Investment works — Leap HEI</title>
+  <meta name="description" content="How a Leap Home Equity Investment works — the full explanation of what an HEI is, how it's structured, and why it's different from a HELOC or cash-out refinance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/leap-eligibility.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#1e3528">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Leap">
+        <img src="images/logo-gold.png" alt="Leap" class="nav__brand-img">
+      </a>
+      <nav>
+        <ul class="nav__menu">
+          <li><a href="how-it-works.html" class="nav__link">How it works</a></li>
+          <li class="nav__item--has-dropdown">
+            <a href="solutions.html" class="nav__link">Solutions</a>
+            <ul class="nav__dropdown">
+              <li><a href="solutions-restore.html">Leap Restore</a></li>
+              <li><a href="solutions-revive.html">Leap Revive</a></li>
+              <li><a href="solutions-relax.html">Leap Relax</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--has-dropdown">
+            <a href="learn.html" class="nav__link">Insights &amp; Resources</a>
+            <ul class="nav__dropdown">
+              <li><a href="financial-planning.html">Financial Planning</a></li>
+              <li><a href="housing-tips.html">Housing Related Tips</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="external-resources.html">External Resources</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--has-dropdown">
+            <a href="about.html" class="nav__link">Company</a>
+            <ul class="nav__dropdown">
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="partners.html">Partners</a></li>
+              <li><a href="pr-media.html">PR &amp; Media</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a href="https://app-stage.leaphei.com/auth/login?callbackUrl=%2Fverify-account" class="nav__signin">Sign In</a>
+        <a href="https://app-stage.leaphei.com/" data-app-href class="nav__cta">Apply &rarr;</a>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="navToggle"><span></span></button>
+    </div>
+    <div class="nav__drawer">
+      <a href="how-it-works.html" class="nav__link">How it works</a>
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__drawer-sub">
+        <a href="solutions-restore.html">Leap Restore</a>
+        <a href="solutions-revive.html">Leap Revive</a>
+        <a href="solutions-relax.html">Leap Relax</a>
+      </div>
+      <a href="learn.html" class="nav__link">Insights &amp; Resources</a>
+      <div class="nav__drawer-sub">
+        <a href="financial-planning.html">Financial Planning</a>
+        <a href="housing-tips.html">Housing Related Tips</a>
+        <a href="faq.html">FAQs</a>
+        <a href="external-resources.html">External Resources</a>
+      </div>
+      <a href="about.html" class="nav__link">Company</a>
+      <div class="nav__drawer-sub">
+        <a href="leadership.html">Leadership</a>
+        <a href="partners.html">Partners</a>
+        <a href="pr-media.html">PR &amp; Media</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <a href="https://app-stage.leaphei.com/auth/login?callbackUrl=%2Fverify-account" class="nav__link nav__link--cta">Sign In</a>
+      <a href="https://app-stage.leaphei.com/" data-app-href class="nav__link nav__link--cta">Apply &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+<!-- Interactive step-process component (supplied by Ashley Bete, integrated 2026-06-05).
+     Loaded only on this page; brand tokens + fonts are aligned to css/main.css. -->
+<link rel="stylesheet" href="css/leap-steps.css">
+
+<style>
+  /* Page-scoped mechanics styles */
+  .mechanics__two-col {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 880px) {
+    .mechanics__two-col { grid-template-columns: 1fr; gap: 2rem; }
+  }
+  .mechanics__copy h2 { margin-top: 0; }
+  .mechanics__copy p { margin: 0 0 1rem; }
+  .mechanics__copy p:last-child { margin-bottom: 0; }
+
+  .mechanics__calc {
+    background: var(--off-white-warm);
+    border: 1px solid var(--rule, rgba(22,24,27,0.12));
+    border-left: 3px solid var(--gold);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  .mechanics__calc-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    color: var(--text-muted, #595A5C);
+    margin-bottom: 1.25rem;
+  }
+  .mechanics__calc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(22,24,27,0.08);
+    font-family: var(--font-sans);
+  }
+  .mechanics__calc-row:last-of-type { border-bottom: 0; }
+  .mechanics__calc-label {
+    font-size: 0.875rem;
+    color: var(--charcoal-soft, #2A2D32);
+    letter-spacing: 0.02em;
+  }
+  .mechanics__calc-value {
+    font-family: var(--font-serif, 'Source Serif 4', serif);
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+  .mechanics__calc-value--xl {
+    font-size: 2.25rem;
+  }
+  .mechanics__calc-value--accent {
+    color: var(--red);
+  }
+  .mechanics__calc-cap {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 2px solid var(--charcoal);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--charcoal);
+  }
+  .mechanics__calc-cap strong { font-weight: 700; }
+
+  /* Worked example on dark */
+  .mechanics__example {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    padding: 3rem 2.5rem;
+    border-radius: 4px;
+  }
+  @media (max-width: 720px) {
+    .mechanics__example { padding: 2rem 1.5rem; }
+  }
+  .mechanics__example-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: var(--gold-soft);
+    margin-bottom: 1rem;
+  }
+  .mechanics__example-title {
+    font-family: var(--font-serif, 'Source Serif 4', serif);
+    color: var(--text-on-dark);
+    margin: 0 0 0.5rem;
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+  .mechanics__example-lead {
+    color: var(--text-on-dark-muted);
+    font-family: var(--font-sans);
+    margin: 0 0 2rem;
+    max-width: 56ch;
+  }
+  .mechanics__example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  @media (max-width: 720px) {
+    .mechanics__example-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+  .mechanics__example-col h4 {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: var(--gold-soft);
+    margin: 0 0 1rem;
+  }
+  .mechanics__example-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(240,237,230,0.12);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+  }
+  .mechanics__example-row:last-child { border-bottom: 0; }
+  .mechanics__example-row span:first-child { color: var(--text-on-dark-muted); }
+  .mechanics__example-row span:last-child {
+    font-family: var(--font-serif, 'Source Serif 4', serif);
+    color: var(--text-on-dark);
+    font-size: 1.125rem;
+  }
+  .mechanics__example-row--total {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--gold);
+    border-bottom: 0 !important;
+  }
+  .mechanics__example-row--total span:first-child {
+    color: var(--gold-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .mechanics__example-row--total span:last-child {
+    color: var(--gold-soft);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* ── Settlement chart — editorial bar visualization ──
+     Replaces the previous 4-quadrant figure grid with two
+     readable horizontal bars: home value over time, then the
+     $620K sale split. Same forest/bronze/linen palette. */
+  .settlement-chart {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(244,240,232,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .settlement-chart__section-label {
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-weight: 400;
+    color: var(--gold-soft);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Timeline rows (Today / In five years) */
+  .settlement-chart__timeline { display: flex; flex-direction: column; gap: 1rem; }
+  .settlement-chart__row {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .settlement-chart__row-label {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--text-on-dark-muted);
+  }
+  .settlement-chart__row-bar {
+    height: 32px;
+    background: rgba(244,240,232,0.06);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+  .settlement-chart__row-fill {
+    height: 100%;
+    background: var(--off-white);
+    transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
+  }
+  .settlement-chart__row-delta {
+    height: 100%;
+    background: var(--gold);
+    transition: width 1.2s cubic-bezier(0.16,1,0.3,1) 0.2s;
+  }
+  .settlement-chart__row-value {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: right;
+    min-width: 7ch;
+  }
+  .settlement-chart__row-delta-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+    font-weight: 500;
+  }
+
+  /* Split bar (the $620K split into three slices) */
+  .settlement-chart__split-bar {
+    display: flex;
+    height: 96px;
+    border: 1px solid rgba(184,151,90,0.18);
+  }
+  .settlement-chart__split {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.9rem 1rem;
+    min-width: 0;
+    border-right: 1px solid rgba(15,22,17,0.5);
+  }
+  .settlement-chart__split:last-child { border-right: 0; }
+  .settlement-chart__split--keep {
+    background: var(--off-white);
+    color: var(--charcoal);
+  }
+  .settlement-chart__split--principal {
+    background: var(--gold);
+    color: var(--charcoal-deep);
+  }
+  .settlement-chart__split--share {
+    background: var(--gold-soft);
+    color: var(--charcoal-deep);
+  }
+  .settlement-chart__split-amount {
+    font-family: var(--font-serif);
+    font-size: clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+  .settlement-chart__split-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    opacity: 0.82;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .settlement-chart__split-pct {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    margin-top: 0.2rem;
+  }
+
+  /* Totals line below the split bar */
+  .settlement-chart__totals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: -0.5rem;
+  }
+  .settlement-chart__total {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .settlement-chart__total--leap { text-align: right; }
+  .settlement-chart__total-label {
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--text-on-dark-muted);
+  }
+  .settlement-chart__total-value {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.4rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .settlement-chart__total-value--keep { color: var(--off-white); }
+  .settlement-chart__total-value--leap { color: var(--gold-soft); }
+  .settlement-chart__total-pct {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--text-on-dark-muted);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 720px) {
+    .settlement-chart__row { grid-template-columns: 90px 1fr; }
+    .settlement-chart__row-value { grid-column: 2 / 3; text-align: left; margin-top: 0.25rem; }
+    .settlement-chart__split-bar { height: auto; flex-direction: column; }
+    .settlement-chart__split {
+      border-right: 0;
+      border-bottom: 1px solid rgba(15,22,17,0.4);
+      padding: 1rem 1.1rem;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .settlement-chart__split:last-child { border-bottom: 0; }
+    .settlement-chart__split-label { font-size: 0.66rem; }
+    .settlement-chart__totals { grid-template-columns: 1fr; gap: 1rem; }
+    .settlement-chart__total--leap { text-align: left; }
+  }
+
+  /* Downside callout */
+  .mechanics__callout {
+    border-left: 4px solid var(--gold);
+    background: var(--off-white-warm);
+    padding: 1.75rem 2rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .mechanics__callout-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .mechanics__callout h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.375rem;
+  }
+  .mechanics__callout p {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-sans);
+    color: var(--charcoal-soft, #2A2D32);
+  }
+  .mechanics__callout p:last-child { margin-bottom: 0; }
+
+  /* Final CTA banner */
+  .mechanics__cta {
+    text-align: center;
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    padding: 3.5rem 2rem;
+    border-radius: 4px;
+  }
+  .mechanics__cta-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: var(--gold-soft);
+    margin-bottom: 1rem;
+  }
+  .mechanics__cta h2 {
+    color: var(--text-on-dark);
+    margin: 0 0 1rem;
+    font-size: 2rem;
+  }
+  .mechanics__cta p {
+    color: var(--text-on-dark-muted);
+    margin: 0 auto 2rem;
+    max-width: 52ch;
+    font-family: var(--font-sans);
+  }
+
+  .mechanics__section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+  .mechanics__section-head h2 { margin: 0.5rem 0 0.75rem; }
+  .mechanics__section-head p {
+    margin: 0;
+    color: var(--text-muted, #595A5C);
+    font-family: var(--font-sans);
+  }
+
+  /* Editorial page-head is now defined globally in css/main.css —
+     see .page-head--editorial / .page-head--with-image / .page-head__chapter.
+     Per Will's 2026-05-13 "this looks too much like the first header
+     on the homepage" — the editorial cream + portrait-inset variant
+     differentiates interior pages from the marketing hero. */
+</style>
+
+  <section class="solution-hero">
+    <video class="solution-hero__video" autoplay muted loop playsinline preload="none">
+      <source src="videos/kitchen-hero.mp4" type="video/mp4">
+    </video>
+    <div class="solution-hero__overlay"></div>
+    <div class="solution-hero__inner">
+      <div class="solution-hero__copy">
+        <span class="solution-hero__chapter">How It Works &middot; The Mechanics</span>
+        <h1 class="solution-hero__title">A home equity investment, <em>fully&nbsp;explained</em>.</h1>
+        <p class="solution-hero__lead">Most homeowners have only encountered HELOCs and cash-out refinancing. Unfortunately, the requirements for qualification are stringent, the timelines and paperwork are a hassle, and these products might not be a fit for your unique situation. A home equity investment is structurally different and can offer a different path to the outcomes you seek &mdash; including financial mobility and wellness.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leap shares the downside callout -->
+  <section class="section section--off">
+    <div class="container container--narrow">
+      <div class="mechanics__callout">
+        <div class="mechanics__callout-eyebrow">How it works</div>
+        <h3>At its core, a Home Equity Investment provides you a lump sum upfront in exchange for a share of your home&rsquo;s future value</h3>
+        <p>You get your cash now and unlike a traditional loan, you don&rsquo;t pay anything back until you sell, refinance, or the term ends (typically 10 years). Leap shares in your home&rsquo;s growth &mdash; or loss. When the agreement ends, the investor gets their percentage of your home&rsquo;s value at that time.</p>
+        <p>Most importantly, you keep control &mdash; you still own your home, you just repay the investor when you&rsquo;re ready to move or settle the agreement.</p>
+        <p><p><em>Our complete Terms and Disclosures are <a href="PDFs/Key%20Terms%20and%20Disclosures.pdf" style="text-decoration: underline;"  target="_blank" rel="noopener noreferrer">available here</a>.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The four lifecycle steps, presented as an interactive stepper.
+       Replaces the previous static 4-card grid; same content and copy,
+       driven by the Leap step-process component (js/leap-steps.js). -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div id="leap-steps-root"></div>
+    </div>
+  </section>
+
+  <!-- Why pick an HEI -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="mechanics__section-head">
+        <h2>Why pick an HEI?</h2>
+      </div>
+      <div class="card-grid card-grid--2">
+        <article class="card">
+          <span class="card__eyebrow">No monthly payments or debt</span>
+          <h3 class="card__title">Payments only when you&rsquo;re ready</h3>
+          <p class="card__body">Unlike home equity loans or HELOCs, HEIs do not require repayment in installments. You repay at sale, refinance, or term end &mdash; on your timeline.</p>
+        </article>
+        <article class="card">
+          <span class="card__eyebrow">Financial inclusion</span>
+          <h3 class="card__title">Accessible to more homeowners</h3>
+          <p class="card__body">Lenient approval terms make HEIs accessible to homeowners with lower credit scores who may not qualify for traditional equity products.</p>
+        </article>
+        <article class="card">
+          <span class="card__eyebrow">No interest</span>
+          <h3 class="card__title">A share of appreciation, not debt</h3>
+          <p class="card__body">Since HEIs are not traditional loans, there is no interest charged. You share a portion of your home&rsquo;s future value &mdash; nothing more.</p>
+        </article>
+        <article class="card">
+          <span class="card__eyebrow">Retain ownership</span>
+          <h3 class="card__title">Your home. Your title.</h3>
+          <p class="card__body">Homeowners keep the title and can continue living in the house throughout the entire agreement term. Nothing about your daily life changes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Comparison table -->
+  <section class="section section--off">
+    <div class="container">
+      <div class="compare__head">
+        <span class="eyebrow">Comparison</span>
+        <h2>Four ways to tap your equity. <em>One is structurally different.</em></h2>
+        <p>If you&rsquo;re considering a Leap HEI, you&rsquo;re almost certainly also considering a HELOC, a cash-out refinance, or a personal loan. Here&rsquo;s an honest comparison, written by the company that benefits from the comparison being honest.</p>
+      </div>
+      <div class="compare__wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-leap">Leap HEI</th>
+              <th scope="col">HELOC</th>
+              <th scope="col">Cash-out refi</th>
+              <th scope="col">Personal loan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monthly payments</td><td class="is-leap">None</td><td>Yes &mdash; principal + interest</td><td>Yes &mdash; principal + interest</td><td>Yes &mdash; principal + interest</td></tr>
+            <tr><td>Interest rate</td><td class="is-leap">None &mdash; share of appreciation instead</td><td>Variable, prime + margin</td><td>Fixed (typically higher than your existing mortgage in current environment)</td><td>Fixed or variable, often 9&ndash;20%</td></tr>
+            <tr><td>Adds debt to balance sheet</td><td class="is-leap">No &mdash; structured as an investment</td><td>Yes &mdash; second lien</td><td>Yes &mdash; replaces existing mortgage at larger amount</td><td>Yes &mdash; unsecured installment loan</td></tr>
+            <tr><td>Credit score impact</td><td class="is-leap">Minimal &mdash; soft pull for pre-qual</td><td>Hard pull, reports to bureaus</td><td>Hard pull, refinance reports to bureaus</td><td>Hard pull, reports to bureaus</td></tr>
+            <tr><td>Repayment trigger</td><td class="is-leap">Home sale, refinance, or end of term</td><td>Monthly throughout draw + repayment</td><td>Monthly over new mortgage term</td><td>Monthly over loan term (3&ndash;7 yrs)</td></tr>
+            <tr><td>Maximum amount</td><td class="is-leap">Up to $300,000</td><td>Typically 80&ndash;85% of equity, lender-dependent</td><td>Typically 80% of home value minus existing mortgage</td><td>Typically &lt;$100,000</td></tr>
+            <tr><td>Decision speed</td><td class="is-leap">Fast &mdash; automated underwriting</td><td>2&ndash;6 weeks</td><td>4&ndash;8 weeks</td><td>Days to weeks</td></tr>
+            <tr><td>Income / employment requirement</td><td class="is-leap">Flexible &mdash; equity-driven</td><td>Strict income verification</td><td>Strict income verification</td><td>Strict income verification</td></tr>
+            <tr><td>Closing costs</td><td class="is-leap">Single appraisal + closing fees, typically 2&ndash;3%</td><td>2&ndash;5% of credit line</td><td>2&ndash;5% of new loan amount</td><td>Origination fees 1&ndash;8%</td></tr>
+            <tr><td>Affects your existing mortgage rate</td><td class="is-leap">No</td><td>No</td><td>Yes &mdash; replaces it at current market rate</td><td>No</td></tr>
+            <tr><td>Cost if home value declines</td><td class="is-leap">Reduced repayment &mdash; downside shared</td><td>Full loan balance still owed</td><td>Full loan balance still owed</td><td>Full loan balance still owed</td></tr>
+            <tr><td>Cost if home value rises sharply</td><td class="is-leap">Higher repayment via appreciation share</td><td>Unchanged</td><td>Unchanged</td><td>Unchanged</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="prose">
+        <h2>When a HELOC is the better choice</h2>
+        <p>A HELOC makes more sense than a Leap HEI when you need short-term, flexible access to a smaller amount of capital and you have the monthly cash flow to comfortably service the new payment. HELOCs offer a revolving credit line you can draw and repay over a long period, which is unmatched by any other product when flexibility is the priority. If you expect to use the funds for under three years and you have strong income coverage, the math often favors a HELOC.</p>
+
+        <h2>When a cash-out refinance is the better choice</h2>
+        <p>A cash-out refinance is the right product when current mortgage rates are meaningfully <em>below</em> your existing rate. In that environment, you reduce your monthly payment <em>and</em> extract equity simultaneously. In the current rate environment, where most homeowners locked in below-market rates between 2020 and 2022, a cash-out refi typically increases the monthly cost meaningfully &mdash; making it a poor fit for most homeowners we speak with.</p>
+
+        <h2>When a personal loan is the better choice</h2>
+        <p>Rarely, in our view. Personal loans are typically a last resort for homeowners &mdash; the interest rates are high, the terms are short, and they don&rsquo;t take advantage of the equity you&rsquo;ve worked to build. The one exception is a small amount (under $25,000) for a short period (under two years), where the convenience of a personal loan can outweigh the higher rate.</p>
+
+        <h2>When a Leap HEI is the better choice</h2>
+        <p>A Leap HEI is built specifically for homeowners who want access to a larger amount of equity (typically $50,000 or more), for a longer period (5&ndash;15 years), without adding a monthly payment to their budget. It is the only product among the four that does not require monthly service. It is the only product that shares the downside if your home declines in value. And it is the only product structured as an investment, not as debt &mdash; meaning it does not appear on your credit report and does not affect your debt-to-income ratio for future borrowing.</p>
+
+        <p>If you&rsquo;d like to see what you&rsquo;d qualify for, the pre-qualification takes under two minutes and does not create a hard pull on your credit report.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 6: Final CTA banner -->
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container container--narrow">
+      <div class="mechanics__cta">
+        <div class="mechanics__cta-eyebrow">Next step</div>
+        <h2>Ready to see what you qualify for?</h2>
+        <p>A three-question pre-qualification takes under two minutes and does not affect your credit score. You'll get a product recommendation and an estimated investment range.</p>
+        <a href="apply.html" class="btn btn--primary btn--lg">Check my eligibility &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Initialise the interactive step process. Runs after #leap-steps-root
+       (above) is in the DOM. Copy mirrors the page's lifecycle narrative. -->
+  <script src="js/leap-steps.js"></script>
+  <script>
+    (function () {
+      var root = document.getElementById('leap-steps-root');
+      if (!root || typeof LeapSteps !== 'function') return;
+
+      var steps = [
+        {
+          timing:     'Day 0',
+          title:      'Apply and qualify',
+          shortLabel: 'Apply &amp;<br>qualify',
+          body:       'A three-question pre-qualification confirms eligibility in under two minutes, and a full application then runs an automated credit and equity check without the income statements, employment verification, or paperwork backlog a traditional mortgage tends to require.'
+        },
+        {
+          timing:     'Within days',
+          title:      'Receive your investment',
+          shortLabel: 'Receive<br>funds',
+          body:       'Once approved, the investment funds at closing, typically within days, and up to $300,000 in cash is deposited directly to your account for any purpose you choose.'
+        },
+        {
+          timing:     'Years 1-30',
+          title:      'Live without a new payment',
+          shortLabel: 'Live<br>payment-free',
+          body:       'For the full term, anywhere from ten to thirty years depending on the product, you make no monthly payments and accrue no interest, so the investment never shows up on your household budget the way a HELOC or refinance would.'
+        },
+        {
+          timing:     'At sale',
+          title:      'Repay when you choose',
+          shortLabel: 'Repay<br>at sale',
+          body:       'When you sell the home, refinance, or reach the end of the term, you repay the original investment plus a share of your home\'s appreciation since the investment began.'
+        }
+      ];
+
+      new LeapSteps('#leap-steps-root', steps, {
+        ctaLabel:   'Check my eligibility',
+        onComplete: function () { window.location.href = 'apply.html'; }
+      });
+    })();
+  </script>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__brand" aria-label="Leap home">
+            <img src="images/logo-gold.png" alt="Leap" class="footer__brand-img">
+          </a>
+          <p class="footer__tag">A home equity agreement platform built for homeowners who want to put their equity to work without taking on a new monthly bill.</p>
+          <!-- Social URLs per Shane's 2026-06-26 "Website notes". -->
+          <div class="footer__social" aria-label="Follow Leap">
+            <a href="https://www.linkedin.com/company/leap-hei/" target="_blank" rel="noopener" aria-label="Leap on LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/leap_hea_/" target="_blank" rel="noopener" aria-label="Leap on Instagram">Instagram</a>
+            <a href="https://www.facebook.com/leaphealosangeles/" target="_blank" rel="noopener" aria-label="Leap on Facebook">Facebook</a>
+            <a href="https://x.com/leap_hea_" target="_blank" rel="noopener" aria-label="Leap on X">X</a>
+          </div>
+          <div class="footer__contact">
+            <a href="mailto:hello@leaphei.com">hello@leaphei.com</a>
+            <a href="tel:+18005327462">(800) 532-7462</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4><a href="solutions.html">Solutions</a></h4>
+          <ul>
+            <li><a href="solutions-restore.html">Leap Restore</a></li>
+            <li><a href="solutions-revive.html">Leap Revive</a></li>
+            <li><a href="solutions-relax.html">Leap Relax</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4><a href="learn.html">Insights &amp; Resources</a></h4>
+          <ul>
+            <li><a href="financial-planning.html">Financial Planning</a></li>
+            <li><a href="housing-tips.html">Housing Related Tips</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="external-resources.html">External Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4><a href="about.html">Company</a></h4>
+          <ul>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="pr-media.html">PR &amp; Media</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> Leap Analytics, Inc.&nbsp; All rights reserved. NMLS ID: 360009</span>
+        <div class="footer__legal">
+          <!-- Privacy + Terms link to Leap's hosted PDF per Shane's 2026-06-26 notes.
+               NOTE(Will): Shane supplied the SAME PDF URL for both Privacy and Terms
+               (…_Leap-Terms.pdf). Confirm whether a separate Privacy PDF exists. -->
+          <a href="https://cdn.prod.website-files.com/6847277523d31f80602ba064/6847277523d31f80602ba081_Leap-Terms.pdf" target="_blank" rel="noopener">Privacy</a>
+          <a href="https://cdn.prod.website-files.com/6847277523d31f80602ba064/6847277523d31f80602ba081_Leap-Terms.pdf" target="_blank" rel="noopener">Terms</a>
+          <a href="legal-disclosures.html">Disclosures</a>
+          <a href="legal-licenses.html">Licenses &amp; NMLS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+  <!-- Leap eligibility modal — opens on any "Check my eligibility" trigger; calls the Fly API -->
+  <script src="js/leap-eligibility.js" defer></script>
+</body>
+</html>
